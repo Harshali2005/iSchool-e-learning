@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://ischool-e-learning.onrender.com'
+  baseURL: 'https://ischool-e-learning.onrender.com/api'
 });
 
 API.interceptors.request.use(config => {
