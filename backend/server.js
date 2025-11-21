@@ -14,10 +14,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://e-learning-frontend.onrender.com'
-  ],
+  origin: [process.env.CLIENT_URL, 'http://localhost:5173'],
   credentials: true
 }));
 app.use(express.json());
