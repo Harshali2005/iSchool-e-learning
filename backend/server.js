@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
 const PORT = process.env.PORT || 5000;
-connectDB(process.env.MONGODB_URI || 'mongodb+srv://bagulharshu2005_db_user:H123456@harshu@cluster0.z53ra9k.mongodb.net/elearning?retryWrites=true&w=majority';);
+connectDB(process.env.MONGODB_URI || 'mongodb+srv://bagulharshu2005_db_user:H123456@harshu@cluster0.z53ra9k.mongodb.net/elearning?retryWrites=true&w=majority');
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
