@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use("/uploads", express.static("uploads"));
 
-connectDB(process.env.MONGODB_URI || "mongodb+srv://bagulharshu2005_db_user:Harsha123@cluster0.z53ra9k.mongodb.net/elearning?retryWrites=true&w=majority");
+connectDB(process.env.MONGODB_URI || "mongodb+srv://bagulharshu2005_db_user:Harsha123@cluster0.z53ra9k.mongodb.net/mernApp?appName=Cluster0");
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
