@@ -5,7 +5,13 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://e-learning-frontend.onrender.com' // This is fine for now
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use("/uploads", express.static("uploads"));
