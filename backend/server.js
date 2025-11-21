@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://e-learning-frontend.onrender.com' // This is fine for now
+    'https://e-learning-frontend.onrender.com'
   ],
   credentials: true
 }));
