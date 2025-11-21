@@ -2,5 +2,22 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-    plugins: [react()],
+  plugins: [react()],
+  server: {
+    port: 5173,
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    // Add this for better production builds
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        }
+      }
+    }
+  },
+  // Important for SPA routing in production
+  base: './'
 })
